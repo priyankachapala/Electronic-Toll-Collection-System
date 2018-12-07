@@ -11,3 +11,9 @@ Components Recquired<br />
 6.Capacitors – 22pF<br />
 7.Resistors<br />
 
+WORKING:<br />
+ 
+  The RFID tag issued to the user contains digital code. Microcontroller reads the RFID card number from the RFID reader and then sends this data to LCD which aids the person to read the balance of the card. Micontroller then decides to open the gate based on the balance in the RFID tag. Tags with insuffient balance are considered invalid and informed to pay the balance manually.
+  
+  Complete theory about various components used can be found in the Theory file
+
