@@ -1,4 +1,4 @@
-% enabling the pins
+%enabling pins and header files
 #include<at89x52.h>
 #include<string.h>
 #define LCD P0
@@ -24,7 +24,6 @@ en=1;
 delay(1);
 en=0;
 }
-
 
 void lcd_init(void)
 {
@@ -60,15 +59,15 @@ lcd_data(s[i]);
 delay(50);
 }
 
-%intialsing the uart
+%intialsing uart channel
 void uart_init(void)
 {
 SCON=0x50;//MODE 1..8 BIT DATA,..1 STOP BIT,..1 START BIT
 TMOD=0x20;//TIMER 1....MODE 2...8 BIT AUTO RELOAD
 TL1 = 0xFD;
 TH1=0xFD;//BAUD RATE 9600
-TR1 = 1; 
-} 
+TR1 = 1;
+}
 
 void number(int a)
 {
@@ -90,12 +89,13 @@ lcd_data(c[i]); // display the frequency on lcd
 }
 }
 }
+
 unsigned int b1=60,b2=40,b3=20,b4=0;
 
 
-void main()
 
-{ 
+void main()
+{
 
 unsigned char RF[12];
 unsigned int k=0;
